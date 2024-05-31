@@ -9,8 +9,8 @@
 }
 body {
   background: #f8f8f8;
-  padding-top: 10px;
-  padding-right: 50px;
+  padding-top: 15px;
+  padding-right: 15px;
 }
 :root {
   --gradient: linear-gradient(to right, #e2336b, #fcac46);
@@ -28,7 +28,7 @@ body {
   position: absolute;
   width: calc(100% - 300px);
   top: 0;
-  left: 400px;
+  left: 300px;
   background: #fff;
   border-radius: 1rem 0 0 1rem;
   z-index: 10000;
