@@ -10,6 +10,23 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script type="module">
+
+import EmbeddedPageSdk from "https://app.realeye.io/sdk/js/testRunnerEmbeddableSdk-1.5.js"
+
+/**
+ * NOTICE: The SDK MUST be created when the UI is fully loaded and ready.
+ * So, if you are using (modern) frontend framework please use its proper event to create the SDK when everything is ready and fully rendered, instead of the vanilla JS "DOMContentLoaded" event.
+ */
+window.addEventListener("DOMContentLoaded", () => {
+   const debugMode = false;
+   const stimulusId = null; // Or Stimulus/Item UUID from RealEye Study, e.g. "61560b76-3d31-4f0e-b530-55bd8709aadb"
+   const forceRun = false;
+
+   const reSdk = new EmbeddedPageSdk(debugMode, stimulusId, forceRun)
+});
+
+</script>
   </head>
   <body>
     <!-- sidebar -->
@@ -18,7 +35,7 @@
         <img src="https://uploads.codesandbox.io/uploads/user/a28344d9-8bad-48a8-b4fa-4fc6e0452ef7/3vKb-logo1.png" alt="logo" />
       </a>
       <!--profile Image -->
-      <div class="profile">
+      <div class="profile" data-re-aoi-name=profile>
         <div class="profile-img">
           <img src="https://deadline.com/wp-content/uploads/2023/02/sex-education-emma-mackey-netflix.jpg" alt="profile" />
         </div>
@@ -29,7 +46,7 @@
         <span>_nadafjuber@33_</span>
       </div>
       <!-- About -->
-      <div class="about">
+      <div class="about" data-re-aoi-name="about">
         <!-- Posts -->
         <div class="box">
           <h3>54</h3>
@@ -47,7 +64,7 @@
         </div>
       </div>
       <!-- Menu -->
-      <div class="menu">
+      <div class="menu" data-re-aoi-name="menu">
         <a href="#">
           <span class="icon">
             <i class="ri-function-line"></i>
@@ -107,7 +124,7 @@
     </div>
     <!---Main Home-->
     <div class="main-home">
-      <div class="header">
+      <div class="header" data-re-aoi-name="header">
         <!--Search-->
         <div class="search">
           <i class="ri-search-line"></i>
@@ -125,6 +142,7 @@
           </a>
         </div>
       </div>
+      <div  data-re-aoi-name="stories">
       <div class="stories-title">
         <h1>stories</h1>
         <a href="#" class="btn">
@@ -177,6 +195,7 @@
           <img src="https://m.media-amazon.com/images/M/MV5BMjA0MjMzMTE5OF5BMl5BanBnXkFtZTcwMzQ2ODE3Mw@@._V1_.jpg" alt="profile" />
         </div>
       </div>
+        </div>
       <div class="feed">
         <h1>Feed<h1>
         <div class="feed-text">
@@ -186,7 +205,7 @@
       </div>
       <div class="main-post">
         <!--Box1-->
-        <div class="post-box">
+        <div class="post-box" data-re-aoi-name="box1">
           <img src="https://pk7jxm.csb.app/img/post1.jpg" alt="post">
           <div class="post-info">
           <div class="post-profile">
@@ -204,7 +223,7 @@
           </div>
         </div>
         <!--Box2-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box2">
             <img src="https://as1.ftcdn.net/v2/jpg/01/07/68/98/1000_F_107689864_aDRzRTm4JYIF0AP8uTcM46Lu8ayQ397U.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -223,7 +242,7 @@
           </div>
        
                   <!--Box3-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box3">
             <img src="https://i.abcnewsfe.com/a/ccc2de0c-4237-45de-9579-ac66cc27d9e9/humpback-whale-gty-jt-240220_1708450395992_hpMain.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -241,7 +260,7 @@
             </div>
           </div>
                    <!--Box4-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box4">
             <img src="https://uploads-ssl.webflow.com/66598c7ab90ea6b81fce8f26/6659a3d9a55dc6e4914c4b2f_ikea-catalogue-cover-2021-01-1201x1280.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -250,7 +269,7 @@
             </div>
           </div>
               <!--Box5-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box5">
             <img src="https://planetescape.pl/blog//app/uploads/2020/11/8-Sao-Miguel-Sete-Cidades.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -268,7 +287,7 @@
             </div>
           </div>
                       <!--Box6-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box6">
             <img src="https://s.lubimyczytac.pl/upload/books/4942000/4942534/1130750-352x500.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -286,7 +305,7 @@
             </div>
           </div>
                       <!--Box7-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box7">
             <img src="https://images.r.pl/zdjecia/lokalizacje/37/maroko_37_122894_264533_1000x1000.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -304,7 +323,7 @@
             </div>
           </div>
                       <!--Box8-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box8">
             <img src="https://cdn.kastatic.org/ka-perseus-images/d689374cd1fc505db10d04b00573ffc3311d2738.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -322,7 +341,7 @@
             </div>
           </div>
                       <!--Box9-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box9">
             <img src="https://www.sherrynetherland.com/resources/media/user/1487788417-midtown-manhattan.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -340,7 +359,7 @@
             </div>
           </div>
                       <!--Box10-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box10">
             <img src="https://cdn.britannica.com/60/92960-050-327CF926/pyramid-Mayan-Chichen-Itza-Mex.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -359,7 +378,7 @@
           </div>
 
                       <!--Box11-->
-        <div class="post-box">
+        <div class="post-box"  data-re-aoi-name="box11">
             <img src="https://witoldochal.blog/wp-content/uploads/2019/03/2018-05-16-01.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
@@ -376,8 +395,8 @@
             </div>  
             </div>
           </div>
-          <!--Box5-->
-        <div class="post-box">
+          <!--Box12-->
+        <div class="post-box"  data-re-aoi-name="box12">
             <img src="https://as1.ftcdn.net/v2/jpg/01/07/68/98/1000_F_107689864_aDRzRTm4JYIF0AP8uTcM46Lu8ayQ397U.jpg" alt="post">
             <div class="post-info">
             <div class="post-profile">
